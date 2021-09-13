@@ -1,0 +1,35 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "测试登录成功",
+    "children" : [ {
+      "name" : "test_login_ok",
+      "uid" : "4e5da524e44724d1",
+      "parentUid" : "9854010f2770f76675dd758aa2d559fa",
+      "status" : "broken",
+      "time" : {
+        "start" : 1631351582867,
+        "stop" : 1631351589738,
+        "duration" : 6871
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "9854010f2770f76675dd758aa2d559fa"
+  }, {
+    "name" : "test_login_error_2",
+    "uid" : "6f6397ff98e94a86",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1631351603581,
+      "stop" : 1631351605228,
+      "duration" : 1647
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}

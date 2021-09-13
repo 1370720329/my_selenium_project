@@ -1,0 +1,205 @@
+{
+  "uid" : "4e5da524e44724d1",
+  "name" : "test_login_ok",
+  "fullName" : "testcase.test_login_ok.Test_login#test_login_ok",
+  "historyId" : "35dd96bb98b4c499720eb7d6f0c87a15",
+  "time" : {
+    "start" : 1631351582867,
+    "stop" : 1631351589738,
+    "duration" : 6871
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: not all arguments converted during string formatting",
+  "statusTrace" : "self = <testcase.test_login_ok.Test_login object at 0x0000029A256C94F0>\n\n    @allure.feature('测试登录成功')\n    # 测试登录成功的用例\n    @pytest.mark.run(order=1)\n    @pytest.mark.dependency()  # 这是依赖关系装饰器\n    \n    def test_login_ok(self) :\n        # 测试数据\n        loc = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[1]/div/div/input')  # 输入用户\n        loc2 = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[2]/div/div/input')  # 输入密码\n        loc3 = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[3]/div/button/span')  # 登录按钮\n        self.driver.implicitly_wait(5)\n        url = 'http://192.168.101.101:7061/login'\n        user = '1370720329'\n        pwd = '1370720329'\n    \n        # 测试代码\n        # 测试报告中的步骤\n        with allure.step('登录页面') :\n            self.driver.get(url)\n    \n        with allure.step('输入账号') :\n            self.input_text(user, *loc)\n    \n        with allure.step('输入密码') :\n            self.input_text(pwd, *loc2)\n    \n        with allure.step('点击登录') :\n            self.clicks(*loc3)\n        sleep(5)\n        # 日志信息\n        self.log.debug('test1登录的URL是：%s', format(url))\n        self.log.debug('test1登录的账号是：%s', format(user))\n        self.log.debug('test1登录的密码是：%s', format(pwd))\n    \n        # 根据登录后的页面标题判断是否登录成功\n        try :\n            # a = self.driver.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[2]/div[2]/div/span').text\n    \n            a = self.get_title()\n            print(a)\n>           assert '高校大数据治理业务平台' == a\nE           AssertionError: assert '高校大数据治理业务平台' == '大数据治理平台'\nE             - 大数据治理平台\nE             + 高校大数据治理业务平台\nE             ? ++     ++\n\ntestcase\\test_login_ok.py:70: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <testcase.test_login_ok.Test_login object at 0x0000029A256C94F0>\n\n    @allure.feature('测试登录成功')\n    # 测试登录成功的用例\n    @pytest.mark.run(order=1)\n    @pytest.mark.dependency()  # 这是依赖关系装饰器\n    \n    def test_login_ok(self) :\n        # 测试数据\n        loc = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[1]/div/div/input')  # 输入用户\n        loc2 = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[2]/div/div/input')  # 输入密码\n        loc3 = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[3]/div/button/span')  # 登录按钮\n        self.driver.implicitly_wait(5)\n        url = 'http://192.168.101.101:7061/login'\n        user = '1370720329'\n        pwd = '1370720329'\n    \n        # 测试代码\n        # 测试报告中的步骤\n        with allure.step('登录页面') :\n            self.driver.get(url)\n    \n        with allure.step('输入账号') :\n            self.input_text(user, *loc)\n    \n        with allure.step('输入密码') :\n            self.input_text(pwd, *loc2)\n    \n        with allure.step('点击登录') :\n            self.clicks(*loc3)\n        sleep(5)\n        # 日志信息\n        self.log.debug('test1登录的URL是：%s', format(url))\n        self.log.debug('test1登录的账号是：%s', format(user))\n        self.log.debug('test1登录的密码是：%s', format(pwd))\n    \n        # 根据登录后的页面标题判断是否登录成功\n        try :\n            # a = self.driver.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[2]/div[2]/div/span').text\n    \n            a = self.get_title()\n            print(a)\n            assert '高校大数据治理业务平台' == a\n    \n        except Exception as b :\n>           self.log.error('登录失败，请检查！', b)\n\ntestcase\\test_login_ok.py:73: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nE:\\Python\\lib\\logging\\__init__.py:1463: in error\n    self._log(ERROR, msg, args, **kwargs)\nE:\\Python\\lib\\logging\\__init__.py:1577: in _log\n    self.handle(record)\nE:\\Python\\lib\\logging\\__init__.py:1587: in handle\n    self.callHandlers(record)\nE:\\Python\\lib\\logging\\__init__.py:1649: in callHandlers\n    hdlr.handle(record)\nE:\\Python\\lib\\logging\\__init__.py:950: in handle\n    self.emit(record)\nE:\\Python\\lib\\site-packages\\_pytest\\logging.py:328: in emit\n    super().emit(record)\nE:\\Python\\lib\\logging\\__init__.py:1089: in emit\n    self.handleError(record)\nE:\\Python\\lib\\logging\\__init__.py:1081: in emit\n    msg = self.format(record)\nE:\\Python\\lib\\logging\\__init__.py:925: in format\n    return fmt.format(record)\nE:\\Python\\lib\\site-packages\\_pytest\\logging.py:89: in format\n    return super().format(record)\nE:\\Python\\lib\\logging\\__init__.py:664: in format\n    record.message = record.getMessage()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <LogRecord: root, 40, E:\\Python脚本文件夹\\my_selenium_projrct\\testcase\\test_login_ok.py, 73, \"登录失败，请检查！\">\n\n    def getMessage(self):\n        \"\"\"\n        Return the message for this LogRecord.\n    \n        Return the message for this LogRecord after merging any user-supplied\n        arguments with the message.\n        \"\"\"\n        msg = str(self.msg)\n        if self.args:\n>           msg = msg % self.args\nE           TypeError: not all arguments converted during string formatting\n\nE:\\Python\\lib\\logging\\__init__.py:369: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1631351573710,
+      "stop" : 1631351582864,
+      "duration" : 9154
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: not all arguments converted during string formatting",
+    "statusTrace" : "self = <testcase.test_login_ok.Test_login object at 0x0000029A256C94F0>\n\n    @allure.feature('测试登录成功')\n    # 测试登录成功的用例\n    @pytest.mark.run(order=1)\n    @pytest.mark.dependency()  # 这是依赖关系装饰器\n    \n    def test_login_ok(self) :\n        # 测试数据\n        loc = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[1]/div/div/input')  # 输入用户\n        loc2 = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[2]/div/div/input')  # 输入密码\n        loc3 = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[3]/div/button/span')  # 登录按钮\n        self.driver.implicitly_wait(5)\n        url = 'http://192.168.101.101:7061/login'\n        user = '1370720329'\n        pwd = '1370720329'\n    \n        # 测试代码\n        # 测试报告中的步骤\n        with allure.step('登录页面') :\n            self.driver.get(url)\n    \n        with allure.step('输入账号') :\n            self.input_text(user, *loc)\n    \n        with allure.step('输入密码') :\n            self.input_text(pwd, *loc2)\n    \n        with allure.step('点击登录') :\n            self.clicks(*loc3)\n        sleep(5)\n        # 日志信息\n        self.log.debug('test1登录的URL是：%s', format(url))\n        self.log.debug('test1登录的账号是：%s', format(user))\n        self.log.debug('test1登录的密码是：%s', format(pwd))\n    \n        # 根据登录后的页面标题判断是否登录成功\n        try :\n            # a = self.driver.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[2]/div[2]/div/span').text\n    \n            a = self.get_title()\n            print(a)\n>           assert '高校大数据治理业务平台' == a\nE           AssertionError: assert '高校大数据治理业务平台' == '大数据治理平台'\nE             - 大数据治理平台\nE             + 高校大数据治理业务平台\nE             ? ++     ++\n\ntestcase\\test_login_ok.py:70: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <testcase.test_login_ok.Test_login object at 0x0000029A256C94F0>\n\n    @allure.feature('测试登录成功')\n    # 测试登录成功的用例\n    @pytest.mark.run(order=1)\n    @pytest.mark.dependency()  # 这是依赖关系装饰器\n    \n    def test_login_ok(self) :\n        # 测试数据\n        loc = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[1]/div/div/input')  # 输入用户\n        loc2 = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[2]/div/div/input')  # 输入密码\n        loc3 = (By.XPATH, '/html/body/div/div/div/div[1]/form/div[3]/div/button/span')  # 登录按钮\n        self.driver.implicitly_wait(5)\n        url = 'http://192.168.101.101:7061/login'\n        user = '1370720329'\n        pwd = '1370720329'\n    \n        # 测试代码\n        # 测试报告中的步骤\n        with allure.step('登录页面') :\n            self.driver.get(url)\n    \n        with allure.step('输入账号') :\n            self.input_text(user, *loc)\n    \n        with allure.step('输入密码') :\n            self.input_text(pwd, *loc2)\n    \n        with allure.step('点击登录') :\n            self.clicks(*loc3)\n        sleep(5)\n        # 日志信息\n        self.log.debug('test1登录的URL是：%s', format(url))\n        self.log.debug('test1登录的账号是：%s', format(user))\n        self.log.debug('test1登录的密码是：%s', format(pwd))\n    \n        # 根据登录后的页面标题判断是否登录成功\n        try :\n            # a = self.driver.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[2]/div[2]/div/span').text\n    \n            a = self.get_title()\n            print(a)\n            assert '高校大数据治理业务平台' == a\n    \n        except Exception as b :\n>           self.log.error('登录失败，请检查！', b)\n\ntestcase\\test_login_ok.py:73: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nE:\\Python\\lib\\logging\\__init__.py:1463: in error\n    self._log(ERROR, msg, args, **kwargs)\nE:\\Python\\lib\\logging\\__init__.py:1577: in _log\n    self.handle(record)\nE:\\Python\\lib\\logging\\__init__.py:1587: in handle\n    self.callHandlers(record)\nE:\\Python\\lib\\logging\\__init__.py:1649: in callHandlers\n    hdlr.handle(record)\nE:\\Python\\lib\\logging\\__init__.py:950: in handle\n    self.emit(record)\nE:\\Python\\lib\\site-packages\\_pytest\\logging.py:328: in emit\n    super().emit(record)\nE:\\Python\\lib\\logging\\__init__.py:1089: in emit\n    self.handleError(record)\nE:\\Python\\lib\\logging\\__init__.py:1081: in emit\n    msg = self.format(record)\nE:\\Python\\lib\\logging\\__init__.py:925: in format\n    return fmt.format(record)\nE:\\Python\\lib\\site-packages\\_pytest\\logging.py:89: in format\n    return super().format(record)\nE:\\Python\\lib\\logging\\__init__.py:664: in format\n    record.message = record.getMessage()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <LogRecord: root, 40, E:\\Python脚本文件夹\\my_selenium_projrct\\testcase\\test_login_ok.py, 73, \"登录失败，请检查！\">\n\n    def getMessage(self):\n        \"\"\"\n        Return the message for this LogRecord.\n    \n        Return the message for this LogRecord after merging any user-supplied\n        arguments with the message.\n        \"\"\"\n        msg = str(self.msg)\n        if self.args:\n>           msg = msg % self.args\nE           TypeError: not all arguments converted during string formatting\n\nE:\\Python\\lib\\logging\\__init__.py:369: TypeError",
+    "steps" : [ {
+      "name" : "登录页面",
+      "time" : {
+        "start" : 1631351582870,
+        "stop" : 1631351584113,
+        "duration" : 1243
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "输入账号",
+      "time" : {
+        "start" : 1631351584113,
+        "stop" : 1631351584256,
+        "duration" : 143
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "输入密码",
+      "time" : {
+        "start" : 1631351584256,
+        "stop" : 1631351584474,
+        "duration" : 218
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "点击登录",
+      "time" : {
+        "start" : 1631351584474,
+        "stop" : 1631351584691,
+        "duration" : 217
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "4fbba48232e0d05b",
+      "name" : "log",
+      "source" : "4fbba48232e0d05b.txt",
+      "type" : "text/plain",
+      "size" : 5475
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 4,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1631351590222,
+      "stop" : 1631351594454,
+      "duration" : 4232
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试登录成功"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "tag",
+    "value" : "dependency"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_login_ok"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_login"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-CFC9S14"
+  }, {
+    "name" : "thread",
+    "value" : "20524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_login_ok"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a4f652c81173b8ea",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created exception\nfrom chrome not reachable\n  (Session info: chrome=92.0.4515.159)\n  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.18363 x86_64)",
+      "time" : {
+        "start" : 1630488064989,
+        "stop" : 1630488064989,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "4b9dec1627b28f5a",
+      "status" : "broken",
+      "statusDetails" : "TypeError: not all arguments converted during string formatting",
+      "time" : {
+        "start" : 1626853402275,
+        "stop" : 1626853410359,
+        "duration" : 8084
+      }
+    }, {
+      "uid" : "9633434a5bf16914",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624347139078,
+        "stop" : 1624347152732,
+        "duration" : 13654
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "dependency", "run(order=1)" ]
+  },
+  "source" : "4e5da524e44724d1.json",
+  "parameterValues" : [ ]
+}

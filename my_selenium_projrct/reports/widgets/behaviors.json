@@ -1,0 +1,15 @@
+{
+  "total" : 2,
+  "items" : [ {
+    "uid" : "9854010f2770f76675dd758aa2d559fa",
+    "name" : "测试登录成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}

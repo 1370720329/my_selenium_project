@@ -1,0 +1,41 @@
+{
+  "35dd96bb98b4c499720eb7d6f0c87a15" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4e5da524e44724d1",
+      "status" : "broken",
+      "statusDetails" : "TypeError: not all arguments converted during string formatting",
+      "time" : {
+        "start" : 1631351582867,
+        "stop" : 1631351589738,
+        "duration" : 6871
+      }
+    } ]
+  },
+  "c191b39aee7793e4382c592db7135289" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6f6397ff98e94a86",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631351603581,
+        "stop" : 1631351605228,
+        "duration" : 1647
+      }
+    } ]
+  }
+}

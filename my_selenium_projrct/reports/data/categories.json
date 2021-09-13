@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "TypeError: not all arguments converted during string formatting",
+      "children" : [ {
+        "name" : "test_login_ok",
+        "uid" : "4e5da524e44724d1",
+        "parentUid" : "6f17ac034aa64d4177ecaed6289c0744",
+        "status" : "broken",
+        "time" : {
+          "start" : 1631351582867,
+          "stop" : 1631351589738,
+          "duration" : 6871
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6f17ac034aa64d4177ecaed6289c0744"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

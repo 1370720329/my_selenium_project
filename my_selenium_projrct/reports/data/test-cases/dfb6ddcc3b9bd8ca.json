@@ -1,0 +1,103 @@
+{
+  "uid" : "dfb6ddcc3b9bd8ca",
+  "name" : "test_login_error_2",
+  "fullName" : "testcase.test_login_error_2.Test_login_error#test_login_error_2",
+  "historyId" : "c191b39aee7793e4382c592db7135289",
+  "time" : {
+    "start" : 1624347166343,
+    "stop" : 1624347169392,
+    "duration" : 3049
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1624347156872,
+      "stop" : 1624347166343,
+      "duration" : 9471
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "21836a453eebc109",
+      "name" : "log",
+      "source" : "21836a453eebc109.txt",
+      "type" : "text/plain",
+      "size" : 6237
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1624347169392,
+      "stop" : 1624347173573,
+      "duration" : 4181
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "run(order=2)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_login_error_2"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_login_error"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-CFC9S14"
+  }, {
+    "name" : "thread",
+    "value" : "20912-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_login_error_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "run(order=2)" ]
+  },
+  "source" : "dfb6ddcc3b9bd8ca.json",
+  "parameterValues" : [ ]
+}
